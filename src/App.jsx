@@ -32,9 +32,9 @@ function App() {
   return (
     <>
     {/* <h1>Today's Weather</h1> */}
-    <div className='bg-[url(https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg)]  h-screen bg-cover md:bg-center flex justify-center align-top gap-5'>
+    <div className='bg-[url(https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg)]  bg-[length:100vw_100vh] h-[100vh] md:bg-center flex flex-col sm:flex-row justify-center align-top items-center sm:gap-20 gap-5'>
 
-      <div className='bg-slate-800 bg-opacity-60 m-auto mr-0 w-1/5 h-[18.3rem] rounded-md pt-2'>
+      <div className='bg-slate-800 bg-opacity-60 w-[65%] sm:m-auto sm:mr-0 sm:w-1/5 sm:h-fit rounded-md py-2 mt-10'>
         {weatherData && <Temperature 
         setCity={setCity}
         stats={{
@@ -48,9 +48,9 @@ function App() {
         }}
         />}
       </div>
-
-      <div className=' ml-0 m-auto w-1/3 h-[18.3rem] grid grid-cols-2 gap-4'>
-        <h1 className=' bg-slate-600 bg-opacity-60  text-center text-slate-200 text-2xl font-semibold font-serif shadow-xl pb-[2px] pt-2 rounded-md col-span-2 h-fit'>Today's Highlights</h1>
+ 
+      <div className=' sm:m-auto sm:ml-0 sm:w-1/3 h-[18.3rem] grid grid-cols-2 gap-4 pb-10'>
+        <h1 className=' bg-slate-600 bg-opacity-60 text-center text-slate-200 text-2xl font-semibold font-serif shadow-xl pb-[2px] pt-2 rounded-md col-span-2  h-fit'>Today's Highlights</h1>
         {weatherData &&
         (
           <>
